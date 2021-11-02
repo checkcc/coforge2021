@@ -2,6 +2,8 @@ package com.demo;
 
 public class Message {
 	
+
+	
 	private String message;
 
 	public String getMessage() {

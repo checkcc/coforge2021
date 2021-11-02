@@ -16,16 +16,26 @@ public class MainClient {
 		//for B
 		Message messagserivceB = (Message) context.getBean("messageservice");
 		
+		//for C
+		Message messagserivceC = (Message) context.getBean("messageservice");
+		
 		
 		///setting some values
-		messagserivceA.setMessage("Message of  A");
+		messagserivceA.setMessage("Raju");
 		
 		System.out.println(" from A  -->        "+messagserivceA.getMessage());
+		System.out.println(" from AAA  -->        "+messagserivceA);
 		
 		
-		
+		messagserivceB.setMessage("Ram");
 		System.out.println(" from B -->    "+messagserivceB.getMessage());
 		
+		System.out.println(" from BBBB  -->        "+messagserivceB);
+		
+		
+		messagserivceC.setMessage("tom");
+		System.out.println(" from C -->    "+messagserivceC.getMessage());
+		System.out.println(" from BBBB  -->        "+messagserivceC);
 		
 		
 	}
