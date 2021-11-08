@@ -10,16 +10,16 @@ public interface StudentDAO {
 	public void setDataSoruce(DataSource ds);
 	
 	// insert records for student
-	public void createStudent(String name,String age);
+	public void createStudent(String name,String age);   //done
 	
 	// update records for student
-	public void updateStudentRecord(Student student); // this method implemented
+	public void updateStudentRecord(Student student); // this method implemented..done
 	
 	// delete records for student
-	public void deleteStudentById(Integer id);   ///pending
+	public Integer deleteStudentById(Integer id);   ///done
 	
 	// view records for pertucular student
-	public Student viewStudentRecodById(Integer id);  //pending
+	public Student viewStudentRecodById(Integer id);  //done
 	
 	// view all records for students
 	public List<Student> listAllStudents(); //done
