@@ -19,8 +19,6 @@
 
 	<bean id="studentdao" class="com.demo.StudentJDBCImpl">
 		<property name="dataSoruce" ref="dataSoruce" />
-
-
 	</bean>
 
 

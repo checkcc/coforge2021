@@ -13,15 +13,15 @@ public interface StudentDAO {
 	public void createStudent(String name,String age);
 	
 	// update records for student
-	public void updateStudentRecord(String name,String age);
+	public void updateStudentRecord(Student student); // this method implemented
 	
 	// delete records for student
-	public void deleteStudentById(Integer id);
+	public void deleteStudentById(Integer id);   ///pending
 	
 	// view records for pertucular student
-	public Student viewStudentRecodById(Integer id);
+	public Student viewStudentRecodById(Integer id);  //pending
 	
 	// view all records for students
-	public List<Student> listAllStudents(Student student);
+	public List<Student> listAllStudents(); //done
 
 }

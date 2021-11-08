@@ -1,12 +1,15 @@
 package com.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
-public class StudentJDBCImpl  implements StudentDAO{
+public class StudentJDBCImpl  implements StudentDAO {
 	
 	private DataSource dataSourceprop;
 	private JdbcTemplate JdbcTemplateoobject;
@@ -20,7 +23,7 @@ public class StudentJDBCImpl  implements StudentDAO{
 	
 		
 	}
-
+      //api for create method
 	//user deifined method and you have to write logic
 	public void createStudent(String studname, String age) {
 		
@@ -33,11 +36,6 @@ public class StudentJDBCImpl  implements StudentDAO{
 		
 	}
 
-	@Override
-	public void updateStudentRecord(String name, String age) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void deleteStudentById(Integer id) {
@@ -52,11 +50,34 @@ public class StudentJDBCImpl  implements StudentDAO{
 	}
 
 	@Override
-	public List<Student> listAllStudents(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Student> listAllStudents() {
+		
+		 List<Student> studentlist = new ArrayList<Student>();
+		 
+		 String studentlistsql="select * from student";
+		 
+		  // any of else can be used
+	//	 studentlist = JdbcTemplateoobject.query(studentlistsql,new StudentJbdcRowMapper(Student.class));
+		 
+		 studentlist = JdbcTemplateoobject.query(studentlistsql,new BeanPropertyRowMapper(Student.class));
+		 
+	
+		return studentlist;
 	}
 
+	   /// api for update
+	
+	@Override
+	public void updateStudentRecord(Student student) {
+	String udpdatestudedntrecord="UPDATE student SET studname = ?, age= ?  where id= ?"; 
+		JdbcTemplateoobject.update(udpdatestudedntrecord, new Object[] {
+			student.getStudname(),student.getAge() , Integer.valueOf(student.getId())
+		});
+	}
+
+	
+
+	
 
 
 }

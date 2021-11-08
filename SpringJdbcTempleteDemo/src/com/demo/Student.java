@@ -5,6 +5,7 @@ public class Student {
 	private Integer id;
 	private String studname;
 	private String age;
+
 	
 	
 	
