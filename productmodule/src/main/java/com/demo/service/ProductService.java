@@ -1,6 +1,8 @@
 package com.demo.service;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import com.demo.pojo.Product;
@@ -12,23 +14,22 @@ public interface ProductService{
 	Product CreatProductDetails(Product product); ///done
 	
 	// add for product
-		Product addProductDetails(Product product);
+		Product addProductDetails(Product product);  //ignore it
 
 		// list of all products
 
-		ArrayList<Product> ListOfProducts(Product product);  //pending
-
+		List<Product> ListOfProducts(Product product);  //done
 		// Delete of Product
 
-		void deleteProductById(long id); //pending
+		void deleteProduct(Long id); //done
 
 		// view of particular Product by id
 
-	     Optional<Product> getProductById(long id);  //pending
+	     Optional<Product> getProductById(long id);  //done
 
 		// update of particular Product by id
 
-		void updateOfProductById(long id); //pending..
+	     Product updateOfProductById(Long id); //done
 	
 }
 	
