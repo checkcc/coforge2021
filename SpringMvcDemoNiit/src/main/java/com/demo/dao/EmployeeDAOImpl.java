@@ -18,7 +18,8 @@ public class EmployeeDAOImpl  implements EmployeeDao {
 	   Employee listemp = new Employee();
 	   
 	   listemp.setId(101);
-	   listemp.setName("ram");
+	   listemp.setFirstName("ram");
+	   listemp.setLastName("kumar");
 	   
 	   listofemployee.add(listemp);
 		
