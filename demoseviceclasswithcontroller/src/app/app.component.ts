@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public todayDate: Date = new Date();
-  public amount: number = 4582;
-  public message: string="Learning";
-     
+  title = 'ecommerceapp';
 }
