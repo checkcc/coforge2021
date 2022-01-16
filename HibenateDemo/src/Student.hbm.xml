@@ -13,7 +13,7 @@
 <property name="studname"   column="studentname"  type="string"></property>
 <property name="age"  column="age"  type="string"></property>
 </class>
-</hibernate-mapping>
+       </hibernate-mapping>
 
 
 
